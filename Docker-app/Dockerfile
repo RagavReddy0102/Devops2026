@@ -5,7 +5,7 @@ FROM tomcat:9.0-jdk17-corretto
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy the built WAR file from the target directory into Tomcat's webapps
-COPY target/clothing-store.war /usr/local/tomcat/webapps/clothing-store.war
+COPY target/clothing-store.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose container port
 EXPOSE 8080
