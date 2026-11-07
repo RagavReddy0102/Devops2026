@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  application:
+    image: ragavreddy/clothing-store:javaapp
+    ports:
+      - "1111:8080"
+    deploy:
+      replicas: 3
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: overlay
